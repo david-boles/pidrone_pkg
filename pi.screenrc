@@ -49,7 +49,7 @@ stuff ""
 screen -t "FC"
 stuff "source setup.sh\n"
 stuff "cd $(rospack find pidrone_pkg)/scripts/\n"
-stuff "python flight_controller_node.py" # We require this be started manually
+stuff "rosrun project-sensors-implementation-david-boles student_flight_controller_node.py" # We require this be started manually
 
 screen -t "PID"
 stuff "source setup.sh\n"
@@ -64,12 +64,12 @@ stuff "python state_estimator.py -p ukf7d\n"
 screen -t "Vision"
 stuff "source setup.sh\n"
 stuff "cd $(rospack find pidrone_pkg)/scripts\n"
-stuff "python vision_flow_and_phase.py\n"
+stuff "rosrun project-sensors-implementation-david-boles student_vision_flow_and_phase.py\n"
 
 screen -t "IR"
 stuff "source setup.sh\n"
 stuff "cd $(rospack find pidrone_pkg)/scripts/\n"
-stuff "python infrared_pub.py\n"
+stuff "rosrun project-sensors-implementation-david-boles student_infrared_pub.py\n"
 
 screen -t "rosbridge"
 stuff "source setup.sh\n"
